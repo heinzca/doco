@@ -1,5 +1,13 @@
 # Linux Command Line
 
+
+<div style="text-align: right; font-size: small;">
+
+[Back to README](README.md)
+
+</div>
+
+
 ## Basics
 
 | command | action |
@@ -16,6 +24,7 @@
 | clear | clear window |
 | pwd | print working directory |
 
+<br><br>
 
 ## Directories
 | command | action |
@@ -25,6 +34,8 @@
 | mv [File or Directory] [destination] | move file or folder to [destination] |
 | rmdir [directory name] | remove empty directory |
 | rm -r [directory name] | remove directory and it's contents (-r = recursive) |
+
+<br><br>
 
 ## Files
 | command | action |
@@ -37,6 +48,8 @@
 | rm [file1] [file2] | remove multiple specified files |
 | rm [\*.jpg] | remove all files matching the wildcard \*.jpg |
 
+<br><br>
+
 ## Other useful
 | command | action |
 | ----- | -----|
@@ -45,31 +58,5 @@
 | [command] --help | find help on a given command |
 | exit | closes the terminal window |
 
-
-# sudo - SuperUser Do
-
-Executes commands as the super user / admin.
-
-## sudo commands
-
-| command | action |
-| ----- | -----|
-| sudo reboot | quick reboot - via terminal |
-| sudo shutdown now | immediate shutdown - via terminal |
-
-## APT (Advanced packaging Tool)
-
-**apt** is used for installing packages. More modern version of **apt-get**.
-
-Installs applications from online repositories.
-
-| command | action |
-| ----- | -----|
-| sudo apt update | sudo (superuser) update apt repository locations |
-| sudo apt upgrade | sudo (superuser) upgrade updatable apt repository locations |
-| sudo apt update && sudo apt upgrade | sudo (superuser) update package list and upgrade installed packages |
-| sudo apt install [package name] | install an application package |
-| sudo apt remove [package name] | remove an application package |
-
-
+<br><br>
 
