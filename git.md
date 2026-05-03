@@ -274,12 +274,35 @@ Workflow diagram: [Working Directory] --git add--> [Staging Area] --git commit--
 
 Summary of Git Best Practices:
 * Commit Often
+    * Small frequent commits make it easier to keep track and find bugs.
 * Write Clear Commit Messages
+    * Be specific: Say what and why, not just "Update" or "Fix".
+    * Use the imperative mood: For example, "Add login validation" instead of "Added login validation".
 * Use Branches
+    * Create branches for features, fixes and experiments.
+    * Why? Branches let you test and develop independently, and make collaboration safer.
+    * Name branches clearly: For example, feature/login-form or bugfix/user-auth.
 * Pull Before You Push
+    * Always git pull before pushing.
+    * This updates your local branch with changes from others, helps you avoid conflicts, and ensures your push will succeed.
+    * Why? If someone else has pushed changes since your last pull, your push may be rejected or cause conflicts.
 * Review Changes Before Committing
+    * Use git status and git diff to review your changes before you commit.
+    * This helps you catch mistakes early.
 * Keep Repositories Small
+    A* void adding large files or unnecessary dependencies.
+    * This keeps your repository fast and easy to clone.
+    * Tip: For large files (like videos or datasets), use Git LFS (Large File Storage) instead of adding them directly to your repo.
 * Use .gitignore
+    * Exclude files that shouldn't be tracked (like build artifacts, log files, or secrets) by adding them to a .gitignore file.
+    * Note: .gitignore only prevents new files from being tracked.
+    * Files already tracked by Git will remain in the repository until you remove them with git rm --cached <file>.
 * Tag Releases
+    * Use tags to mark release points (like v1.0) so you can easily find and reference important versions.
+    * This helps you keep track of your project's history and make it easier to roll back to previous versions if needed.
+
+<br>
+
+**Note:** Good Git habits make it easier for your team (and your future self) to understand and build on your work.
 
 <br><br>
