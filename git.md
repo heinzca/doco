@@ -1,3 +1,8 @@
+<div style="text-align: left; font-size: small;">
+
+[Back to README](README.md)
+
+</div>
 
 # Git Reference
 
@@ -303,6 +308,7 @@ Summary of Git Best Practices:
 
 <br>
 
-**Note:** Good Git habits make it easier for your team (and your future self) to understand and build on your work.
+**Note:**
+ Good Git habits make it easier for your team (and your future self) to understand and build on your work.
 
 <br><br>

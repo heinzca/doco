@@ -1,4 +1,4 @@
-<div style="text-align: right; font-size: small;">
+<div style="text-align: left; font-size: small;">
 
 [Back to README](README.md)
 

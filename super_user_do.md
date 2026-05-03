@@ -1,3 +1,9 @@
+<div style="text-align: left; font-size: small;">
+
+[Back to README](README.md)
+
+</div>
+
 # sudo - SuperUser Do
 
 Executes commands as the super user / admin.
