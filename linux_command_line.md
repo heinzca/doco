@@ -64,6 +64,7 @@
 ## Changing Default Shell
 | command | action |
 | ----- | -----|
+| echo $0 | List the current shell executable |
 | cat etc/shells | View the available shells |
 | which bash or which zsh | Find the shell path  E.g. /usr/bin/bash |
 | chsh -s /path/to/shell | Change the shell. E.g. chsh -s /usr/bin/bash |
