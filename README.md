@@ -1,10 +1,8 @@
-# doco
-All of my notes
+# My Doco
 
-[Linux Command Line](linux_command_line.md)
+All of my notes:
+- [Linux Command Line](linux_command_line.md)
+- [Super User Do](super_user_do.md)
+- [Git Reference](git.md)
+- [Git and Github Reference](github.md)
 
-[Super User Do](super_user_do.md)
-
-[Git Reference](git.md)
-
-[Git and Github Reference](github.md)
