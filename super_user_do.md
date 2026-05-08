@@ -1,16 +1,23 @@
+# sudo - SuperUser Do
+
 <div style="text-align: left; font-size: small;">
 
 [Back to README](README.md)
 
 </div>
 
-# sudo - SuperUser Do
+`sudo` executes commands as the super user / admin.  
 
-Executes commands as the super user / admin.
+<br>
+
+Sub-headings:
+- [sudo commands](#sudo-commands)
+- [APT (Advanced packaging Tool)](#apt-advanced-packaging-tool)
 
 <br><br>
 
 ## sudo commands
+([top](#sudo---superuser-do))
 
 | command | action |
 | ----- | -----|
@@ -20,6 +27,7 @@ Executes commands as the super user / admin.
 <br><br>
 
 ## APT (Advanced packaging Tool)
+([top](#sudo---superuser-do))
 
 **apt** is used for installing packages. More modern version of **apt-get**.
 

@@ -1,8 +1,25 @@
+# GitHub
+<div style="text-align: left; font-size: small;">
+
 [Back to README](README.md)
 
-# GitHub
+</div>
+
+**Sub-headings:**
+- [Getting Started](#getting-started)
+- [Git Security SSH](#git-security-ssh)
+- [Add SSH to GitHub](#add-ssh-to-github)
+- [Git Set Remote from GitHub](#git-set-remote-from-github)
+- [WIP ...]()
+- []()
+- []()
+- []()
+- []()
+- []()
+
 
 ## Getting Started
+([top](#github))
 
 1. Go to [github.com](https://github.com/) and sign-up for a free account.
 2. Create a new repository.
@@ -13,6 +30,7 @@
 <br>
 
 ## Git Security SSH
+([top](#github))
 
 SSH (Secure Shell) is a way to connect securely to remote computers and services, like Git repositories.
 
@@ -92,6 +110,7 @@ See which keys are loaded in your SSH agent:
 <br>
 
 ## Add SSH to GitHub
+([top](#github))
 
 Now that you have generated your SSH key, you need to add your public key to your GitHub account.
 
@@ -114,6 +133,7 @@ Now that you have generated your SSH key, you need to add your public key to you
 <br>
 
 ## Git Set Remote from GitHub
+([top](#github))
 
 Now that your SSH key is added to GitHub, you can securely connect your local repository to GitHub using SSH.
 

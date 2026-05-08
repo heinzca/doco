@@ -1,12 +1,29 @@
+# Git Reference
 <div style="text-align: left; font-size: small;">
 
 [Back to README](README.md)
 
 </div>
 
-# Git Reference
 
-## Git Config
+**Sub-headings:**
+- [Git Config](#git-config)
+- [Initialize a Git Directory](#initialize-a-git-directory)
+- [Git Staging](#git-staging)
+- [Git Commit](#git-commit)
+- [Git Tagging](#git-tagging)
+- [Git Stash](#git-stash)
+- [Git History](#git-history)
+- [Git Help](#git-help)
+- [Git Branch](#git-branch)
+- [Git Merge](#git-merge)
+- [Git Workflow](#git-workflow)
+- [Git Best Practices](#git-best-practices)
+
+
+
+## Git Config  
+([top](#git-reference))
 
 Use:  
 --global to set values for all repositories; or  
@@ -29,6 +46,7 @@ Use:
 <br><br>
 
 ## Initialize a Git Directory
+([top](#git-reference))
 
 - A Git repository is a folder that Git tracks for changes.  
 - The repository stores all your project's history and versions.  
@@ -46,6 +64,8 @@ Use:
 
 ## Git Staging
 
+([top](#git-reference))
+
 | Command | Action |
 | ----- | ----- |
 | git add filename.md | Stage a single file called filename.md |
@@ -58,6 +78,8 @@ Use:
 <br><br>
 
 ## Git Commit
+
+([top](#git-reference))
 
 | Command | Action |
 | ----- | ----- |
@@ -75,6 +97,8 @@ Use:
 <br><br>
 
 ## Git Tagging
+
+([top](#git-reference))
 
 | Command | Action |
 | ----- | ----- |
@@ -111,6 +135,8 @@ Use:
 
 ## Git Stash
 
+([top](#git-reference))
+
 Sometimes you need to quickly switch tasks or fix a bug, but you're not ready to commit your work.  
 
 git stash lets you save your uncommitted changes and return to a clean working directory.  
@@ -144,6 +170,9 @@ The most recent stash is on top, and you can apply or drop stashes from the top 
 <br><br>
 
 ## Git History
+
+([top](#git-reference))
+
 | Command | Action |
 | --------------- | ----- |
 | git log | Show full commit history. All commits including author, date and message. Use arrow keys to scroll and q to quit.  To search within th results type /word, enter then n to jump to next. |
@@ -163,6 +192,9 @@ The most recent stash is on top, and you can apply or drop stashes from the top 
 <br><br>
 
 ## Git Help
+
+([top](#git-reference))
+
 | Command | Action |
 | ----- | ----- |
 | git help <command> | See the manual page for a command |
@@ -182,6 +214,8 @@ While viewing help pages:
 <br><br>
 
 ## Git Branch
+
+([top](#git-reference))
 
 Common reasons to create a branch:  
 - Developing a new feature
@@ -212,6 +246,8 @@ Common reasons to create a branch:
 <br><br>
 
 ## Git Merge
+
+([top](#git-reference))
 
 ### Merge Tips
 
@@ -248,6 +284,8 @@ Common reasons to create a branch:
 
 ## Git Workflow
 
+([top](#git-reference))
+
 Git uses a distributed workflow that allows you to work on your code, stage changes, and commit them to your local repository before sharing with others.  
 
 Understanding this workflow is essential for effective version control.  
@@ -276,6 +314,8 @@ Workflow diagram: [Working Directory] --git add--> [Staging Area] --git commit--
 <br><br>
 
 ## Git Best Practices
+
+([top](#git-reference))
 
 Summary of Git Best Practices:
 * Commit Often
@@ -312,3 +352,5 @@ Summary of Git Best Practices:
  Good Git habits make it easier for your team (and your future self) to understand and build on your work.
 
 <br><br>
+
+([top](#git-reference))

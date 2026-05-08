@@ -1,15 +1,25 @@
+# Linux Command Line
 <div style="text-align: left; font-size: small;">
 
 [Back to README](README.md)
 
 </div>
 
-# Linux Command Line
+<br>
 
+Sub-headings:
+- [Basics](#basics)
+- [Directories](#directories)
+- [Files](#files)
+- [Other useful](#other-useful)
+- [Changing Default Shell](#changing-default-shell)
+- [Reload Shell and Source Config Changes](#reload-shell-and-source-config-changes)
+- [Replace the Shell Process](#replace-the-shell-process)
 
+<br>
 
-
-## Basics
+## Basics 
+([top](#linux-command-line))
 
 | command | action |
 | ----- | -----|
@@ -28,6 +38,8 @@
 <br><br>
 
 ## Directories
+([top](#linux-command-line))
+
 | command | action |
 | ----- | -----|
 | mkdir [directory name] | make directory |
@@ -39,6 +51,8 @@
 <br><br>
 
 ## Files
+([top](#linux-command-line))
+
 | command | action |
 | ----- | -----|
 | cp [file] [destination] | copy [file] to [destination]  |
@@ -52,6 +66,8 @@
 <br><br>
 
 ## Other useful
+([top](#linux-command-line))
+
 | command | action |
 | ----- | -----|
 | lsblk | list block devices - i.e. shows mounting path |
@@ -62,6 +78,8 @@
 <br><br>
 
 ## Changing Default Shell
+([top](#linux-command-line))
+
 | command | action |
 | ----- | -----|
 | echo $0 | List the current shell executable |
@@ -73,6 +91,8 @@
 <br><br>
 
 ## Reload Shell and Source Config Changes
+([top](#linux-command-line))
+
 Applies config changes without closing your current session.
 | command | action |
 | ----- | -----|
@@ -82,6 +102,8 @@ Applies config changes without closing your current session.
 <br><br>
 
 ## Replace the Shell Process
+([top](#linux-command-line))
+
 Completely restarts the shell, clear temp variables and ensures all config is loaded fresh.
 | command | action |
 | ----- | -----|
