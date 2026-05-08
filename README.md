@@ -6,3 +6,4 @@ All of my notes:
 - [Git Reference](git.md)
 - [Git and Github Reference](github.md)
 
+Here is an edit directly in GitHub.
