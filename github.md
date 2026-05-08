@@ -12,6 +12,7 @@
 - [Git Set Remote from GitHub](#git-set-remote-from-github)
 - [Edit Directly in GitHub](#edit-directly-in-github)
 - [Pull from GitHub](#pull-from-github)
+- [Push to GitHub](#push-to-github)
 
 <br>
 
@@ -266,4 +267,52 @@ If you had a change on the main branch directly on GitHub, then ran the followin
 It completes the equivalent of both 'fetch' and 'merge' to bring your local into synch with the remote repository.
 
 <br>
+
+## Push to GitHub
+([top](#github))
+
+When we have made changes locally, we want to update our remote repository with the changes.
+
+Transferring our local changes to our remote is done with a push command.
+
+The key push commands are:
+- Basic Push
+- Force Push
+- Push Tags
+
+<br>
+
+### Basic Push
+
+This command pushes your current branch to the remote repository named origin
+- `git push origin`
+
+This will upload your local commits to GitHub.
+
+You must have already committed your changes with git commit.
+
+<br>
+
+### Force Push
+
+If your push is rejected due to non-fast-forward updates (for example, after a rebase), you can force the push.
+
+**Warning**: This can overwrite changes on the remote repository. Use with caution!
+- `git push --force origin feature-branch`
+
+Use --force-with-lease for a safer force push:
+- `git push --force-with-lease origin feature-branch`
+
+<br>
+
+### Push Tags
+
+To push all local tags to GitHub:
+- `git push --tags`
+
+To push a specific tag, name that tag in the push:
+- `git push origin v1.0`
+
+<br>
+
 
