@@ -224,13 +224,50 @@ Let's take a closer look into how fetch, merge, and pull works.
 
 ### Git Fetch
 
+git fetch downloads new data from a remote repository, but does not change your working files or branches. It lets you see what others have pushed before you merge or pull.
 
+- `git fetch origin`
+
+This shows whether any changes have been fetched.
+
+Follow this up with a:
+- `git status`
+
+This should show how far behind you are on origin, and next instructions.
+
+You can check the log from origin / main via:
+- `git log origin/main`
+
+This would show any commits made on the remote, which we don't yet have locally.
+
+You can check the diff between local and origin via:
+- `git diff origin/main`
+
+If changes are as expected, you can safely merge.
+
+<br>
 
 ### Git Merge
 
+merge combines the current branch, with a specified branch.
 
+We can merge our current branch 'main' with 'origin/main' via:
+- `git merge origin/main`
+
+Follow up with a git status to confirm you are now clean and up to date with origin/main.
+
+<br>
 
 ### Git Pull
 
+If you just want to update your local repository, without going through all those steps, then pull is a combination of fetch and merge.
 
+It is used to pull all changes from a remote repository into the branch you are working on.
+
+If you had a change on the main branch directly on GitHub, then ran the following locally:
+- `git pull origin`
+
+It completes the equivalent of both 'fetch' and 'merge' to bring your local into synch with the remote repository.
+
+<br>
 
