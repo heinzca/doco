@@ -13,6 +13,7 @@
 - [Edit Directly in GitHub](#edit-directly-in-github)
 - [Pull from GitHub](#pull-from-github)
 - [Push to GitHub](#push-to-github)
+- [GitHub Branches](#github-branches)
 
 <br>
 
@@ -315,4 +316,90 @@ To push a specific tag, name that tag in the push:
 
 <br>
 
+## GitHub Branches
+([top](#github))
 
+### Create Branch on Github UI
+([top](#github))
+
+On GitHub, access your repository and click the "master" / "main" branch button.
+
+There you can create a new Branch. Type in a descriptive name, and click Create branch
+
+The branch should now be created and active. You can confirm which branch you are working on by looking at the branch button.
+
+You can make changes to a file in context of the new branch.
+
+You cam preview, then commit changes to the branch.
+
+To create and immediately switch to the branch via command line:
+- `git switch -c branch-name`
+- `git checkout -b branch-name`
+
+<br>
+
+### Switch Branch
+([top](#github))
+
+To switch to another branch in GitHub's web interface, click the branch dropdown and select the branch you want to work on.
+
+To switch branches using the command line:
+- `git switch branch-name`
+- `git branch branch-name`
+
+<br>
+
+### Delete Branch
+([top](#github))
+
+To delete a branch on GitHub, go to the branches page, find your branch, and click the delete icon (trash can).
+
+To delete a branch using the command line:
+- `git branch -d branch-name`
+
+To delete a remote branch:
+- `git push origin --delete branch-name`
+
+<br>
+
+### Rename Branch
+([top](#github))
+
+To rename a branch using the command line:
+- `git branch -m old-name new-name`
+
+<br>
+
+### Merge Branch
+([top](#github))
+
+To merge a branch into another on GitHub, open a Pull Request (PR) and follow the prompts to merge.
+
+To merge using the command line:
+- `git merge branch-name`
+
+<br>
+
+### View Branches
+([top](#github))
+
+To see all branches in your repository on GitHub, click the branch dropdown at the top of the file list.
+
+To view branches using the command line:
+- `git branch`
+
+<br>
+
+### Protected Branches
+([top](#github))
+
+Some branches (like main) may be protected, meaning you cannot delete or force-push to them without special permissions.
+
+This helps prevent accidental changes to important branches.
+
+<br>
+
+
+
+
+([top](#github))
