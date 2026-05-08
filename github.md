@@ -10,7 +10,8 @@
 - [Git Security SSH](#git-security-ssh)
 - [Add SSH to GitHub](#add-ssh-to-github)
 - [Git Set Remote from GitHub](#git-set-remote-from-github)
-- [WIP ...]()
+- [Edit Directly in GitHub](#edit-directly-in-github)
+- []()
 - []()
 - []()
 - []()
@@ -161,3 +162,75 @@ To add the remote origin (first time):
 
 To update an existing remote to use SSH:  
 `git remote set-url origin git@github.com:your-username/your-repo.git`
+
+<br>
+
+## Edit Directly in GitHub
+([top](#github))
+
+### Edit any File
+
+- GitHub lets you edit files directly in your browser.
+- This is useful for making quick changes without needing to use Git on your computer.
+- To edit a file (like README.md), click the file name in your repository, then click the Edit button (pencil icon).
+- Make changes to the file in the editor. (You can edit any file, not just README.md.)
+- Before saving, you can click Preview changes to see what will change in the file.
+- This helps you check your edits before committing.
+
+<br>
+
+### Commit Changes
+
+- After editing scroll down and 'Commit Changes'.
+- Add a message if it requires explanation.
+- By default, you can commit directly to the main (or master) branch.
+- For bigger changes, it's best to create a new branch.
+- Select Create a new branch for this commit and start a pull request to work safely. 
+- When you choose to create a new branch, GitHub will automatically suggest a branch name.
+- After committing, you can open a pull request to propose your changes.
+
+<br>
+
+## Pull from GitHub
+([top](#github))
+
+### Pull from Remote
+
+After making chnages directly on GitHub, we want to update our local repository with those changes.
+
+Key pull commands:
+- [Fetch](#git-fetch)
+- [Merge](#git-merge)
+- [Pull](#git-pull)
+
+<br>
+
+### Fetch, Pull and Merge
+
+When working as a team on a project, it is important that everyone stays up to date.
+
+Any time you start working on a project, you should get the most recent changes to your local copy.
+
+With Git, you can do that with pull.
+
+pull is a combination of 2 different commands:
+
+    - fetch
+    - merge
+
+Let's take a closer look into how fetch, merge, and pull works.
+
+<br>
+
+### Git Fetch
+
+
+
+### Git Merge
+
+
+
+### Git Pull
+
+
+
