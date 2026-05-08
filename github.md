@@ -11,13 +11,9 @@
 - [Add SSH to GitHub](#add-ssh-to-github)
 - [Git Set Remote from GitHub](#git-set-remote-from-github)
 - [Edit Directly in GitHub](#edit-directly-in-github)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Pull from GitHub](#pull-from-github)
 
+<br>
 
 ## Getting Started
 ([top](#github))
@@ -196,7 +192,7 @@ To update an existing remote to use SSH:
 
 ### Pull from Remote
 
-After making chnages directly on GitHub, we want to update our local repository with those changes.
+After making changes directly on GitHub, we want to update our local repository with those changes.
 
 Key pull commands:
 - [Fetch](#git-fetch)
@@ -215,8 +211,8 @@ With Git, you can do that with pull.
 
 pull is a combination of 2 different commands:
 
-    - fetch
-    - merge
+- fetch
+- merge
 
 Let's take a closer look into how fetch, merge, and pull works.
 
