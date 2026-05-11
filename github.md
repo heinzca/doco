@@ -409,22 +409,18 @@ Firstly run a general `git pull`. This will show any changes on the remote, incl
 
 `git status` should show the state of your current branch.
 
-## Git Branch
+### Git Branch
+([top](#github))
 
-`git branch` may not show the new branch on the remote on our local git yet.
-
-We can use the -a option to see all local and remote branches:
-- `git branch -a`
-
-To view only remote branches:
-- `git branch -r`
-
-Checkout the remote branch:
-- `git checkout branch-name`
-
-Then run a `git pull` to see if we are up to date with the remote.
-
-`git branch` should then show the remote branch in our local git.
+- `git branch` may not show the new branch on the remote on our local git yet.
+- We can use the -a option to see all local and remote branches:
+    - `git branch -a`
+- To view only remote branches:
+    - `git branch -r`
+- Checkout the remote branch:
+    - `git checkout branch-name`
+- Then run a `git pull` to see if we are up to date with the remote.
+- `git branch` should then show the remote branch in our local git.
 
 <br>
 
