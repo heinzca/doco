@@ -12,8 +12,12 @@
 - [Git Set Remote from GitHub](#git-set-remote-from-github)
 - [Edit Directly in GitHub](#edit-directly-in-github)
 - [Pull from GitHub](#pull-from-github)
+- [Push to GitHub](#push-to-github)
+- [GitHub Branches](#github-branches)
+- [Pull Remote Branch from GitHub](#pull-remote-branch-from-github)
+- [Push a Branch to GitHub](#push-a-branch-to-github)
 
-<br>
+<br><br>
 
 ## Getting Started
 ([top](#github))
@@ -24,7 +28,7 @@
     - A remote repository is a version of your project hosted on the internet.
     - GitHub is a popular platform for hosting remote repositories, enabling you to collaborate with others and back up your code.
 
-<br>
+<br><br>
 
 ## Git Security SSH
 ([top](#github))
@@ -104,7 +108,7 @@ See which keys are loaded in your SSH agent:
 
 `ssh-add -d ~/.ssh/id_rsa`
 
-<br>
+<br><br>
 
 ## Add SSH to GitHub
 ([top](#github))
@@ -127,7 +131,7 @@ Now that you have generated your SSH key, you need to add your public key to you
     - You may be prompted to supply your GitHub password or use 2FA to confirm the addition.
     - You will see your new SSH key listed
 
-<br>
+<br><br>
 
 ## Git Set Remote from GitHub
 ([top](#github))
@@ -159,7 +163,7 @@ To add the remote origin (first time):
 To update an existing remote to use SSH:  
 `git remote set-url origin git@github.com:your-username/your-repo.git`
 
-<br>
+<br><br>
 
 ## Edit Directly in GitHub
 ([top](#github))
@@ -185,7 +189,7 @@ To update an existing remote to use SSH:
 - When you choose to create a new branch, GitHub will automatically suggest a branch name.
 - After committing, you can open a pull request to propose your changes.
 
-<br>
+<br><br>
 
 ## Pull from GitHub
 ([top](#github))
@@ -265,5 +269,213 @@ If you had a change on the main branch directly on GitHub, then ran the followin
 
 It completes the equivalent of both 'fetch' and 'merge' to bring your local into synch with the remote repository.
 
+<br><br>
+
+## Push to GitHub
+([top](#github))
+
+When we have made changes locally, we want to update our remote repository with the changes.
+
+Transferring our local changes to our remote is done with a push command.
+
+The key push commands are:
+- Basic Push
+- Force Push
+- Push Tags
+
 <br>
 
+### Basic Push
+
+This command pushes your current branch to the remote repository named origin
+- `git push origin`
+
+This will upload your local commits to GitHub.
+
+You must have already committed your changes with git commit.
+
+<br>
+
+### Force Push
+
+If your push is rejected due to non-fast-forward updates (for example, after a rebase), you can force the push.
+
+**Warning**: This can overwrite changes on the remote repository. Use with caution!
+- `git push --force origin feature-branch`
+
+Use --force-with-lease for a safer force push:
+- `git push --force-with-lease origin feature-branch`
+
+<br>
+
+### Push Tags
+
+To push all local tags to GitHub:
+- `git push --tags`
+
+To push a specific tag, name that tag in the push:
+- `git push origin v1.0`
+
+<br><br>
+
+## GitHub Branches
+([top](#github))
+
+### Create Branch on Github UI
+([top](#github))
+
+On GitHub, access your repository and click the "master" / "main" branch button.
+
+There you can create a new Branch. Type in a descriptive name, and click Create branch
+
+The branch should now be created and active. You can confirm which branch you are working on by looking at the branch button.
+
+You can make changes to a file in context of the new branch.
+
+You can preview, then commit changes to the branch.
+
+To create and immediately switch to the branch via command line:
+- `git switch -c branch-name`
+- `git checkout -b branch-name`
+
+<br>
+
+### Switch Branch
+([top](#github))
+
+To switch to another branch in GitHub's web interface, click the branch dropdown and select the branch you want to work on.
+
+To switch branches using the command line:
+- `git switch branch-name`
+- `git branch branch-name`
+
+<br>
+
+### Delete Branch
+([top](#github))
+
+To delete a branch on GitHub, go to the branches page, find your branch, and click the delete icon (trash can).
+
+To delete a branch using the command line:
+- `git branch -d branch-name`
+
+To delete a remote branch:
+- `git push origin --delete branch-name`
+
+<br>
+
+### Rename Branch
+([top](#github))
+
+To rename a branch using the command line:
+- `git branch -m old-name new-name`
+
+<br>
+
+### Merge Branch
+([top](#github))
+
+To merge a branch into another on GitHub, open a Pull Request (PR) and follow the prompts to merge.
+
+To merge using the command line:
+- `git merge branch-name`
+
+<br>
+
+### View Branches
+([top](#github))
+
+To see all branches in your repository on GitHub, click the branch dropdown at the top of the file list.
+
+To view branches using the command line:
+- `git branch`
+
+<br>
+
+### Protected Branches
+([top](#github))
+
+Some branches (like main) may be protected, meaning you cannot delete or force-push to them without special permissions.
+
+This helps prevent accidental changes to important branches.
+
+<br><br>
+
+## Pull Remote Branch from Github
+([top](#github))
+
+### Pull a Remote Branch
+([top](#github))
+
+Firstly run a general `git pull`. This will show any changes on the remote, including whether any new remote branches exists.
+
+`git status` should show the state of your current branch.
+
+<br>
+
+### Git Branch
+([top](#github))
+
+- `git branch` may not show the new branch on the remote on our local git yet.
+- We can use the -a option to see all local and remote branches:
+    - `git branch -a`
+- To view only remote branches:
+    - `git branch -r`
+- Checkout the remote branch:
+    - `git checkout branch-name`
+- Then run a `git pull` to see if we are up to date with the remote.
+- `git branch` should then show the remote branch in our local git.
+
+<br><br>
+
+## Push a Branch to Github
+([top](#github))
+
+### Push a local branch up to GitHub
+
+Firstly create your new branch locally, make changes, then commit your changes.
+
+Push your branch to GitHub via:
+- `git push origin branch-name`
+
+You should then be able to see the branch on GitHub.
+
+<br>
+
+### Push and Set Upstream
+
+Use this if your branch doesn't exist on GitHub yet, and you want to track it:
+- `git push --set-upstream origin update-readme`
+
+<br>
+
+### Force Push
+
+**Warning**: This overwrites the branch on GitHub with your local changes. Only use if you understand the risks.
+- `git push --force origin update-readme`
+
+<br>
+
+### Delete Remote Branch
+
+Remove a branch from GitHub:
+- `git push origin --delete update-readme`
+
+<br>
+
+### Push All Branches
+
+Push all your local branches to GitHub:
+- `git push --all origin`
+
+<br>
+
+### Push Tags
+
+Push all your tags to GitHub:
+- `git push --tags`
+
+<br>
+
+
+([top](#github))
