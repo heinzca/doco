@@ -17,7 +17,7 @@
 - [Pull Remote Branch from GitHub](#pull-remote-branch-from-github)
 - [Push a Branch to GitHub](#push-a-branch-to-github)
 
-<br>
+<br><br>
 
 ## Getting Started
 ([top](#github))
@@ -28,7 +28,7 @@
     - A remote repository is a version of your project hosted on the internet.
     - GitHub is a popular platform for hosting remote repositories, enabling you to collaborate with others and back up your code.
 
-<br>
+<br><br>
 
 ## Git Security SSH
 ([top](#github))
@@ -108,7 +108,7 @@ See which keys are loaded in your SSH agent:
 
 `ssh-add -d ~/.ssh/id_rsa`
 
-<br>
+<br><br>
 
 ## Add SSH to GitHub
 ([top](#github))
@@ -131,7 +131,7 @@ Now that you have generated your SSH key, you need to add your public key to you
     - You may be prompted to supply your GitHub password or use 2FA to confirm the addition.
     - You will see your new SSH key listed
 
-<br>
+<br><br>
 
 ## Git Set Remote from GitHub
 ([top](#github))
@@ -163,7 +163,7 @@ To add the remote origin (first time):
 To update an existing remote to use SSH:  
 `git remote set-url origin git@github.com:your-username/your-repo.git`
 
-<br>
+<br><br>
 
 ## Edit Directly in GitHub
 ([top](#github))
@@ -189,7 +189,7 @@ To update an existing remote to use SSH:
 - When you choose to create a new branch, GitHub will automatically suggest a branch name.
 - After committing, you can open a pull request to propose your changes.
 
-<br>
+<br><br>
 
 ## Pull from GitHub
 ([top](#github))
@@ -269,7 +269,7 @@ If you had a change on the main branch directly on GitHub, then ran the followin
 
 It completes the equivalent of both 'fetch' and 'merge' to bring your local into synch with the remote repository.
 
-<br>
+<br><br>
 
 ## Push to GitHub
 ([top](#github))
@@ -316,7 +316,7 @@ To push all local tags to GitHub:
 To push a specific tag, name that tag in the push:
 - `git push origin v1.0`
 
-<br>
+<br><br>
 
 ## GitHub Branches
 ([top](#github))
@@ -332,7 +332,7 @@ The branch should now be created and active. You can confirm which branch you ar
 
 You can make changes to a file in context of the new branch.
 
-You cam preview, then commit changes to the branch.
+You can preview, then commit changes to the branch.
 
 To create and immediately switch to the branch via command line:
 - `git switch -c branch-name`
@@ -399,7 +399,7 @@ Some branches (like main) may be protected, meaning you cannot delete or force-p
 
 This helps prevent accidental changes to important branches.
 
-<br>
+<br><br>
 
 ## Pull Remote Branch from Github
 ([top](#github))
@@ -410,6 +410,8 @@ This helps prevent accidental changes to important branches.
 Firstly run a general `git pull`. This will show any changes on the remote, including whether any new remote branches exists.
 
 `git status` should show the state of your current branch.
+
+<br>
 
 ### Git Branch
 ([top](#github))
@@ -424,15 +426,56 @@ Firstly run a general `git pull`. This will show any changes on the remote, incl
 - Then run a `git pull` to see if we are up to date with the remote.
 - `git branch` should then show the remote branch in our local git.
 
-<br>
+<br><br>
 
 ## Push a Branch to Github
 ([top](#github))
 
+### Push a local branch up to GitHub
 
+Firstly create your new branch locally, make changes, then commit your changes.
 
+Push your branch to GitHub via:
+- `git push origin branch-name`
 
+You should then be able to see the branch on GitHub.
 
+<br>
+
+### Push and Set Upstream
+
+Use this if your branch doesn't exist on GitHub yet, and you want to track it:
+- `git push --set-upstream origin update-readme`
+
+<br>
+
+### Force Push
+
+**Warning**: This overwrites the branch on GitHub with your local changes. Only use if you understand the risks.
+- `git push --force origin update-readme`
+
+<br>
+
+### Delete Remote Branch
+
+Remove a branch from GitHub:
+- `git push origin --delete update-readme`
+
+<br>
+
+### Push All Branches
+
+Push all your local branches to GitHub:
+- `git push --all origin`
+
+<br>
+
+### Push Tags
+
+Push all your tags to GitHub:
+- `git push --tags`
+
+<br>
 
 
 ([top](#github))
