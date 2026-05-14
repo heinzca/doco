@@ -14,6 +14,8 @@
 - [Pull from GitHub](#pull-from-github)
 - [Push to GitHub](#push-to-github)
 - [GitHub Branches](#github-branches)
+- [Pull Remote Branch from GitHub](#pull-remote-branch-from-github)
+- [Push a Branch to GitHub](#push-a-branch-to-github)
 
 <br>
 
@@ -399,7 +401,7 @@ This helps prevent accidental changes to important branches.
 
 <br>
 
-## Pull a Branch from Github
+## Pull Remote Branch from Github
 ([top](#github))
 
 ### Pull a Remote Branch
@@ -423,6 +425,9 @@ Firstly run a general `git pull`. This will show any changes on the remote, incl
 - `git branch` should then show the remote branch in our local git.
 
 <br>
+
+## Push a Branch to Github
+([top](#github))
 
 
 
