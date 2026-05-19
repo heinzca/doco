@@ -304,7 +304,7 @@ Workflow diagram: [Working Directory] --git add--> [Staging Area] --git commit--
 | Stages | Description |
 | ----- | ----- |
 | Working Directory (pwd) | This is where you make changes to your files.  Think of it as your workspace or desk.  Files here can be new, modified, or deleted, but Git won't save these changes until you stage and commit them. |
-| Staging Changes (gid add) | When you are happy with your changes, you "stage" them with git add.  This puts your changes in the Staging Area, like putting your finished letter in an envelope. |
+| Staging Changes (git add) | When you are happy with your changes, you "stage" them with git add.  This puts your changes in the Staging Area, like putting your finished letter in an envelope. |
 | Committing Changes (git commit) | Committing saves your staged changes to your local repository.  It's like mailing your letter-you can't change it after it's sent! You can also use git commit -a -m "message" to stage and commit all modified and deleted files in one step (but not new files).|
 | Alternative - add and commit together | You can also use git commit -a -m "message" to stage and commit all modified and deleted files in one step (but not new files). |
 | Pushing changes (git push) | After you commit, your changes are only in your local repository.  Use git push to send your commits to a remote repository (like GitHub or Bitbucket) so others can see them. |
