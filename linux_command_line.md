@@ -10,6 +10,7 @@
 Sub-headings:
 - [Basics](#basics)
 - [Directories](#directories)
+- [Editors](#editors)
 - [Files](#files)
 - [Other useful](#other-useful)
 - [Changing Default Shell](#changing-default-shell)
@@ -33,7 +34,9 @@ Sub-headings:
 | cd .. | move up one directory |
 | cd ../.. | move up multiple directories - keep repeating |
 | clear | clear window |
+| command -v [app name] | check if an app is installed. e,g, command -v vim |
 | pwd | print working directory |
+| whoami | who is the current user |
 
 <br><br>
 
@@ -42,11 +45,23 @@ Sub-headings:
 
 | command | action |
 | ----- | -----|
+| . | current directory |
+| .. | up one directory |
 | mkdir [directory name] | make directory |
 | cp -r [directory] [destination] | copy folder and it's contents (-r = recursive)
 | mv [File or Directory] [destination] | move file or folder to [destination] |
 | rmdir [directory name] | remove empty directory |
 | rm -r [directory name] | remove directory and it's contents (-r = recursive) |
+
+<br><br>
+
+## Editors
+([top](#linux-command-line))
+
+| command | action |
+| ----- | -----|
+| nano | open nano text editor - simple |
+| vim | open vim text editor - more complex |
 
 <br><br>
 
@@ -57,7 +72,9 @@ Sub-headings:
 | ----- | -----|
 | cp [file] [destination] | copy [file] to [destination]  |
 | cp [\*.\*] [destination] | copy [all files matching wildcard - i.e. containing "."] to [destination] |
+| diff [file 1] [file 2] | show differences between file content |
 | mv [File or Directory] [destination] | move file or folder to [destination] |
+| mv [existing file name] [new filename] | rename a file |
 | rm [file] | remove file |
 | rm -i [file] | remove file with prompt first |
 | rm [file1] [file2] | remove multiple specified files |
