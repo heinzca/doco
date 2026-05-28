@@ -105,38 +105,3 @@ Sub-headings:
 | exit | closes the terminal window |
 
 <br><br>
-
-## Changing Default Shell
-([top](#linux-command-line))
-
-| command | action |
-| ----- | -----|
-| echo $0 | List the current shell executable |
-| cat /etc/shells | View the available shells |
-| which bash or which zsh | Find the shell path  E.g. /usr/bin/bash |
-| chsh -s /path/to/shell | Change the shell. E.g. chsh -s /usr/bin/bash |
-| log out / in | Exit and relaunch |
-
-<br><br>
-
-## Reload Shell and Source Config Changes
-([top](#linux-command-line))
-
-Applies config changes without closing your current session.
-| command | action |
-| ----- | -----|
-| For *bash*: source ~/.bashrc | Reload bash and apply config changes |
-| For *zsh*: source ~/.zshrc | Reload zsh and apply config changes |
-
-<br><br>
-
-## Replace the Shell Process
-([top](#linux-command-line))
-
-Completely restarts the shell, clear temp variables and ensures all config is loaded fresh.
-| command | action |
-| ----- | -----|
-| For **bash**: exec bash | Restart bash and apply config changes |
-| For **zsh**: exec zsh | Restart zsh and apply config changes |
-
-<br><br>
