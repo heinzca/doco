@@ -13,9 +13,6 @@ Sub-headings:
 - [Editors](#editors)
 - [Files](#files)
 - [Other useful](#other-useful)
-- [Changing Default Shell](#changing-default-shell)
-- [Reload Shell and Source Config Changes](#reload-shell-and-source-config-changes)
-- [Replace the Shell Process](#replace-the-shell-process)
 
 <br>
 
