@@ -8,9 +8,37 @@
 <br>
 
 Sub-headings:
+- [Bash](#bash)
+    - [.bashrc](#bashrc)
+    - [aliases](#aliases)
 - [Changing Default Shell](#changing-default-shell)
 - [Reload Shell](#reload-shell-and-source-config-changes)
 - [Replace the Shell](#replace-the-shell-process)
+
+<br><br>
+
+## Bash
+([top](#shells))
+
+### .bashrc
+
+Configuration of bash is via the .bashrc file, which lives in your: ~/
+
+**Note:**
+* The template for .bashrc lives in the following directory: /etc/skel/.bashrc
+* When a new user is created, the .bashrc file they receive is a copy of that template.
+
+### aliases
+
+Aliases are shortcuts to execute a onger command.  
+They are generally defined within the .bashrc file.  
+They can also be put into a separate .bash_aliases file.  
+
+
+| command | action |
+| ----- | -----|
+| alias | list out all of the aliases in your config |
+| unalias [alias name] | temporarily stop an alias until the next terminal launch |
 
 <br><br>
 
