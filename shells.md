@@ -30,7 +30,7 @@ Configuration of bash is via the .bashrc file, which lives in your: ~/
 
 ### aliases
 
-Aliases are shortcuts to execute a onger command.  
+Aliases are shortcuts to execute a longer command.  
 They are generally defined within the .bashrc file.  
 They can also be put into a separate .bash_aliases file.  
 
