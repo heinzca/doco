@@ -38,6 +38,7 @@ They can also be put into a separate .bash_aliases file.
 | command | action |
 | ----- | -----|
 | alias | list out all of the aliases in your config |
+| alias [alias-name] | display the code behind the alias |
 | unalias [alias name] | temporarily stop an alias until the next terminal launch |
 
 <br><br>

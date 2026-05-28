@@ -12,6 +12,7 @@ Sub-headings:
 - [Directories](#directories)
 - [Editors](#editors)
 - [Files](#files)
+- [History](#history)
 - [Other useful](#other-useful)
 
 <br>
@@ -76,6 +77,20 @@ Sub-headings:
 | rm -i [file] | remove file with prompt first |
 | rm [file1] [file2] | remove multiple specified files |
 | rm [\*.jpg] | remove all files matching the wildcard \*.jpg |
+
+<br><br>
+
+## History
+([top](#linux-command-line))
+
+| command | action |
+| ----- | -----|
+| history | display a history list of commands |
+| h | history (aliased to h) |
+| !! | re-execute your last command |
+| ![nnn] | execute a history entry = nnn  (e.g. !745) |
+| history [n] | dislays the last n commands (alias e.g. h 10) |
+| history \| grep [search text] | search for a command with given text |
 
 <br><br>
 
