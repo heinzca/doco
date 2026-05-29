@@ -9,5 +9,5 @@ All of my notes:
 - [Linux Permissions](linux_permissions.md)
 - [Linux Resource Monitoring](linux_resource_monitoring.md)
 - [Linux Package Management](linux_package_mgmnt.md)
-
+- [Linux systemd Units](linux_manage_systemd_units.md)
 
