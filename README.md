@@ -7,6 +7,7 @@ All of my notes:
 - [Git and Github Reference](github.md)
 - [Shells](shells.md)
 - [Linux Permissions](linux_permissions.md)
+- [Linux Resource Monitoring](linux_resource_monitoring.md)
 
 
 
