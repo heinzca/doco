@@ -10,11 +10,11 @@ systemd refers to the processes running on your machine
 <br>
 
 Sub-headings:
-- []()
+- [systemctl - system control](#systemctl---system-control)
 
 <br><br>
 
-## systemctl
+## systemctl - system control
 
 | command | action |
 | ---------- | ---------- |
