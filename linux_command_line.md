@@ -16,11 +16,11 @@ Sub-headings:
 ([top](#linux-command-line))
 
 | command | action |
-| ----- | -----|
+| ----- | ----- |
 | `ls` | list (list storage) |
 | `ls -l` | list - long format |
 | `ls -la` | list all (including hidden files) - long format |
-| `cd [directory path]`| change directory |
+| `cd [directory path]` | change directory |
 | `cd` | change to home  directory |
 | `cd ~` | change to home  directory |
 | `cd /` | change to root directory |
@@ -36,12 +36,12 @@ Sub-headings:
 ([top](#linux-command-line))
 
 | command | action |
-| ----- | -----|
+| ----- | ----- |
 | `.` | current directory |
 | `..` | up one directory |
 | `mkdir [directory name]` | make directory |
-| `cp -r [directory] [destination]` | copy folder and it's contents (`-r` = recursive)
-| `mv [File or Directory] [destination]` | move file or folder to [destination] |
+| `cp -r [directory] [destination]` | copy folder and it's contents (`-r` = recursive) |
+| `mv [File or Directory] [destination]` | move file or folder to 'destination' |
 | `rmdir [directory name]` | remove empty directory |
 | `rm -r [directory name]` | remove directory and it's contents (`-r` = recursive) |
 
@@ -50,18 +50,17 @@ Sub-headings:
 ([top](#linux-command-line))
 
 | command | action |
-| ----- | -----|
+| ----- | ----- |
 | `nano` | open nano text editor - simple |
 | `vim` | open vim text editor - more complex |
-
 
 ## Files
 
 ([top](#linux-command-line))
 
 | command | action |
-| ----- | -----|
-| `cp [file] [destination]` | copy 'file' to 'destination'  |
+| ----- | ----- |
+| `cp [file] [destination]` | copy 'file' to 'destination' |
 | `cp [\*.\*] [destination]` | copy all files matching wildcard - i.e. containing "." to 'destination' |
 | `diff [file 1] [file 2]` | show differences between file content |
 | `mv [File or Directory] [destination]` | move file or folder to 'destination' |
@@ -76,13 +75,13 @@ Sub-headings:
 ([top](#linux-command-line))
 
 | command | action |
-| ----- | -----|
+| ----- | ----- |
 | `history` | display a history list of commands |
 | `h` | history (aliased to h) |
 | `!!` | re-execute your last command |
 | `sudo !!` | this will enable you to run a previous command as sudo if you forgot the sudo first time |
 | `![nnn]` | execute a history entry = nnn  (e.g. !745) |
-| `[space] [command]` | adding a space to the start of a command will stop it appearing in history. e.g. ` ls -l` |
+| `[space][command]` | adding a space to the start of a command will stop it appearing in history. e.g. `_ls -l` |
 | `history [n]` | displays the last n commands (alias e.g. h 10) |
 | `history \| grep [search text]` | search for a command with given text |
 
@@ -91,7 +90,7 @@ Sub-headings:
 ([top](#linux-command-line))
 
 | command | action |
-| ----- | -----|
+| ----- | ----- |
 | `lsblk` | list block devices - i.e. shows mounting path |
 | `unzip [zip file name]` | unzip a zip file |
 | `[command] --help` | find help on a given command |
