@@ -81,7 +81,7 @@ Sub-headings:
 | `!!` | re-execute your last command |
 | `sudo !!` | this will enable you to run a previous command as sudo if you forgot the sudo first time |
 | `![nnn]` | execute a history entry = nnn  (e.g. !745) |
-| `[space][command]` | adding a space to the start of a command will stop it appearing in history. e.g. `_ls -l` |
+| `[space][command]` | adding a space to the start of a command will stop it appearing in history. |
 | `history [n]` | displays the last n commands (alias e.g. h 10) |
 | `history \| grep [search text]` | search for a command with given text |
 
