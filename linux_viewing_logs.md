@@ -29,4 +29,4 @@ Some may reside in further sub-directories, but the core one is syslog (system l
 | command | action |
 | ----- | ----- |
 | `journalctl -u [package_name]` | displays log entries for a given process. e.g. `journalctl -u apache2` |
- `journalctl -fu [package_name]` | displays log entries for a given process and follow it (see new items displayed as they occur). e.g. `journalctl -fu apache2` |
+| `journalctl -fu [package_name]` | displays log entries for a given process and follow it (see new items displayed as they occur). e.g. `journalctl -fu apache2` |
