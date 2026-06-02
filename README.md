@@ -3,7 +3,7 @@
 ## Git / GitHub
 
 - [Git Reference](git.md)
-- [Git and Github Reference](github.md)
+- [Git to Github Reference](github.md)
 
 ## Command Line / Shell
 
