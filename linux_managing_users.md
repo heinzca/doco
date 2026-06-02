@@ -4,31 +4,31 @@
 
 ## /etc/passwd
 
-* You can see a list of users via: `cat /etc/passwd`
-* Users with 'nologin' indicate they are unable to log-in.
-* Records for real users show:
-  * User ID
-  * x indicates the user's password is held in a separate file
-  * UID - numeric value
-  * Group ID (can be same as UID)
-  * Name
-  * Home directory
-  * Default shell
-* UIDs of 1000 or higher appear on the GUI - log-in screen.
-* Those below 1000 do not appear on the default log-in screen.
+- You can see a list of users via: `cat /etc/passwd`
+- Users with 'nologin' indicate they are unable to log-in.
+- Records for real users show:
+  - User ID
+  - x indicates the user's password is held in a separate file
+  - UID - numeric value
+  - Group ID (can be same as UID)
+  - Name
+  - Home directory
+  - Default shell
+- UIDs of 1000 or higher appear on the GUI - log-in screen.
+- Those below 1000 do not appear on the default log-in screen.
 
 ## /etc/shadow
 
-* This file shows the password hash for some 'real' users (but not the actual password)
-* To access it you need sudo. e.g.
-  * `sudo cat /etc/shadow`
-* There is broader scope, but not covered here.
+- This file shows the password hash for some 'real' users (but not the actual password)
+- To access it you need sudo. e.g.
+  - `sudo cat /etc/shadow`
+- There is broader scope, but not covered here.
 
 ## /etc/group
 
-* You can view a list of groups via: `cat /etc/group`
-* Groups can be used to grant / limit certain functionality.
-* Users within a group are also listed following the last ':'
+- You can view a list of groups via: `cat /etc/group`
+- Groups can be used to grant / limit certain functionality.
+- Users within a group are also listed following the last ':'
 
 ## View groups for a user
 
@@ -49,30 +49,30 @@ Only root can create users, so need to use sudo.
 
 **Option 1:**
 
-* `su - [user_id]`
-* then prompts for password
-* logout will log you out of that account
+- `su - [user_id]`
+- then prompts for password
+- logout will log you out of that account
 
 **Option 2:**
 
-* as sudo: `sudo su - [user_id]`
-* no password prompt
+- as sudo: `sudo su - [user_id]`
+- no password prompt
 
 ## Changing a password
 
-* `passwd` - will prompt for current and new passwords (plus re-type new to confirm)
-* as sudo: `sudo passwd [user_id]`
-  * no prompt for existing
-  * can set new password
+- `passwd` - will prompt for current and new passwords (plus re-type new to confirm)
+- as sudo: `sudo passwd [user_id]`
+  - no prompt for existing
+  - can set new password
 
 ## Log in specifically as root
 
-* `sudo su -`
-* `passwd [user_id]`
-* logout (of root) when done via:
-  * `logout`
-  * `exit`
-  * `ctrl + d`
+- `sudo su -`
+- `passwd [user_id]`
+- logout (of root) when done via:
+  - `logout`
+  - `exit`
+  - `ctrl + d`
 
 ## Remove a user
 
@@ -82,21 +82,21 @@ Only root can create users, so need to use sudo.
 
 ## Create a group
 
-* `sudo groupadd [group_name]`
-* view group via `cat /etc/group`
+- `sudo groupadd [group_name]`
+- view group via: `cat /etc/group`
 
 ## Add user to a group
 
-* via: `sudo usermod -aG [group_name] [user_id]`
-* user then needs to log out and back in to see new group addition
-* can check via `groups [user_id]`
+- via: `sudo usermod -aG [group_name] [user_id]`
+- user then needs to log out and back in to see new group addition
+- can check via: `groups [user_id]`
 
 ## Remove user from a group
 
-* `sudo gpasswd -d [user_id] [group_id]`
-* can check via `groups [user_id]`
+- `sudo gpasswd -d [user_id] [group_id]`
+- can check via: `groups [user_id]`
 
 ## Remove a group completely
 
-* via: `sudo groupdel [group_name]`
-* check via `cat /etc/group` or `tail /etc/group`
+- via: `sudo groupdel [group_name]`
+- check via: `cat /etc/group` or `tail /etc/group`
