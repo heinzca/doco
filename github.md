@@ -1,11 +1,10 @@
+
 # GitHub
-<div style="text-align: left; font-size: small;">
 
 [Back to README](README.md)
 
-</div>
-
 **Sub-headings:**
+
 - [Getting Started](#getting-started)
 - [Git Security SSH](#git-security-ssh)
 - [Add SSH to GitHub](#add-ssh-to-github)
@@ -18,9 +17,8 @@
 - [Push a Branch to GitHub](#push-a-branch-to-github)
 - [GitHub Flow](#github-flow)
 
-<br><br>
-
 ## Getting Started
+
 ([top](#github))
 
 1. Go to [github.com](https://github.com/) and sign-up for a free account.
@@ -29,16 +27,13 @@
     - A remote repository is a version of your project hosted on the internet.
     - GitHub is a popular platform for hosting remote repositories, enabling you to collaborate with others and back up your code.
 
-<br><br>
-
 ## Git Security SSH
+
 ([top](#github))
 
 SSH (Secure Shell) is a way to connect securely to remote computers and services, like Git repositories.
 
 SSH uses a pair of keys (public and private) to make sure only you can access your code.
-
-<br>
 
 ### Summary of SSH Concepts and Commands
 
@@ -51,9 +46,6 @@ SSH uses a pair of keys (public and private) to make sure only you can access yo
 | `ssh-add -l` | List loaded SSH keys |
 | `ssh-add -d` | Remove a key from agent |
 
-
-<br>
-
 ### How SSH Keys Work
 
 SSH keys come in pairs: a public key (like a lock) and a private key (like your own key).
@@ -62,14 +54,11 @@ You share the public key with the server (like GitHub or Bitbucket), but keep th
 
 Only someone with the private key can access what's locked by the public key.
 
-<br>
-
 ### First-Time SSH Key Setup
+
 If you've never used SSH keys before, follow this step to enable the SSH agent on your operating system:  
 
 `eval $(ssh-agent -s)`
-
-<br>
 
 ### Generating an SSH Key Pair
 
@@ -77,15 +66,11 @@ To create a new SSH key pair, use this command in the terminal (Linux, macOS, or
 
 `h-keygen -t rsa -b 4096 -C "your@email.com"`
 
-<br>
-
 ### Adding Your Key to the SSH Agent
 
 After creating your key, add it to the SSH agent so Git can use it:
 
 `ssh-add ~/.ssh/id_rsa`
-
-<br>
 
 ### Copying Your Public Key
 
@@ -95,23 +80,18 @@ To use SSH with Git hosting services, you need to copy your public key and add i
 - On Windows (Git Bash): clip < ~/.ssh/id_rsa.pub
 - On Linux: cat ~/.ssh/id_rsa.pub (then copy manually)
 
-<br>
-
 ### Listing and Removing SSH Keys
 
 See which keys are loaded in your SSH agent:
 
 `ssh-add -l`
 
-<br>
-
 ### Remove SSH Key from Agent
 
 `ssh-add -d ~/.ssh/id_rsa`
 
-<br><br>
-
 ## Add SSH to GitHub
+
 ([top](#github))
 
 Now that you have generated your SSH key, you need to add your public key to your GitHub account.
@@ -122,8 +102,6 @@ Now that you have generated your SSH key, you need to add your public key to you
 - On macOS: pbcopy < ~/.ssh/id_rsa.pub
 - On Linux: cat ~/.ssh/id_rsa.pub (then copy manually)
 
-<br>
-
 ### Add the Key to GitHub
 
 1. Go to GitHub, click your profile in the top right, and select Settings.
@@ -132,14 +110,11 @@ Now that you have generated your SSH key, you need to add your public key to you
     - You may be prompted to supply your GitHub password or use 2FA to confirm the addition.
     - You will see your new SSH key listed
 
-<br><br>
-
 ## Git Set Remote from GitHub
+
 ([top](#github))
 
 Now that your SSH key is added to GitHub, you can securely connect your local repository to GitHub using SSH.
-
-<br>
 
 ### Test Your SSH Connection
 
@@ -148,13 +123,9 @@ First, test that your SSH connection to GitHub works:
 
 If the last line of the response contains your username on GitHub - all is good.
 
-<br>
-
 ### Get Your Repository's SSH Address
 
-On GitHub, go to your repository and click the Code button. Make sure SSH is selected, then copy the SSH URL (it starts with git@github.com:)
-
-<br>
+On GitHub, go to your repository and click the Code button. Make sure SSH is selected, then copy the SSH URL (it starts with `git@github.com:`)
 
 ### Add or Update the Remote Origin
 
@@ -164,9 +135,8 @@ To add the remote origin (first time):
 To update an existing remote to use SSH:  
 `git remote set-url origin git@github.com:your-username/your-repo.git`
 
-<br><br>
-
 ## Edit Directly in GitHub
+
 ([top](#github))
 
 ### Edit any File
@@ -178,21 +148,18 @@ To update an existing remote to use SSH:
 - Before saving, you can click Preview changes to see what will change in the file.
 - This helps you check your edits before committing.
 
-<br>
-
 ### Commit Changes
 
 - After editing scroll down and 'Commit Changes'.
 - Add a message if it requires explanation.
 - By default, you can commit directly to the main (or master) branch.
 - For bigger changes, it's best to create a new branch.
-- Select Create a new branch for this commit and start a pull request to work safely. 
+- Select Create a new branch for this commit and start a pull request to work safely.
 - When you choose to create a new branch, GitHub will automatically suggest a branch name.
 - After committing, you can open a pull request to propose your changes.
 
-<br><br>
-
 ## Pull from GitHub
+
 ([top](#github))
 
 ### Pull from Remote
@@ -200,11 +167,10 @@ To update an existing remote to use SSH:
 After making changes directly on GitHub, we want to update our local repository with those changes.
 
 Key pull commands:
+
 - [Fetch](#git-fetch)
 - [Merge](#git-merge)
 - [Pull](#git-pull)
-
-<br>
 
 ### Fetch, Pull and Merge
 
@@ -221,8 +187,6 @@ pull is a combination of 2 different commands:
 
 Let's take a closer look into how fetch, merge, and pull works.
 
-<br>
-
 ### Git Fetch
 
 git fetch downloads new data from a remote repository, but does not change your working files or branches. It lets you see what others have pushed before you merge or pull.
@@ -232,32 +196,32 @@ git fetch downloads new data from a remote repository, but does not change your 
 This shows whether any changes have been fetched.
 
 Follow this up with a:
+
 - `git status`
 
 This should show how far behind you are on origin, and next instructions.
 
 You can check the log from origin / main via:
+
 - `git log origin/main`
 
 This would show any commits made on the remote, which we don't yet have locally.
 
 You can check the diff between local and origin via:
+
 - `git diff origin/main`
 
 If changes are as expected, you can safely merge.
-
-<br>
 
 ### Git Merge
 
 merge combines the current branch, with a specified branch.
 
 We can merge our current branch 'main' with 'origin/main' via:
+
 - `git merge origin/main`
 
 Follow up with a git status to confirm you are now clean and up to date with origin/main.
-
-<br>
 
 ### Git Pull
 
@@ -266,13 +230,13 @@ If you just want to update your local repository, without going through all thos
 It is used to pull all changes from a remote repository into the branch you are working on.
 
 If you had a change on the main branch directly on GitHub, then ran the following locally:
+
 - `git pull origin`
 
 It completes the equivalent of both 'fetch' and 'merge' to bring your local into synch with the remote repository.
 
-<br><br>
-
 ## Push to GitHub
+
 ([top](#github))
 
 When we have made changes locally, we want to update our remote repository with the changes.
@@ -280,49 +244,49 @@ When we have made changes locally, we want to update our remote repository with 
 Transferring our local changes to our remote is done with a push command.
 
 The key push commands are:
+
 - Basic Push
 - Force Push
 - Push Tags
 
-<br>
+### Basic
 
-### Basic Push
+This command pushes your current branch to the remote repository named origin:
 
-This command pushes your current branch to the remote repository named origin
 - `git push origin`
 
 This will upload your local commits to GitHub.
 
 You must have already committed your changes with git commit.
 
-<br>
-
-### Force Push
+### Force
 
 If your push is rejected due to non-fast-forward updates (for example, after a rebase), you can force the push.
 
 **Warning**: This can overwrite changes on the remote repository. Use with caution!
+
 - `git push --force origin feature-branch`
 
 Use --force-with-lease for a safer force push:
+
 - `git push --force-with-lease origin feature-branch`
 
-<br>
-
-### Push Tags
+### Tags
 
 To push all local tags to GitHub:
+
 - `git push --tags`
 
 To push a specific tag, name that tag in the push:
+
 - `git push origin v1.0`
 
-<br><br>
-
 ## GitHub Branches
+
 ([top](#github))
 
 ### Create Branch on Github UI
+
 ([top](#github))
 
 On GitHub, access your repository and click the "master" / "main" branch button.
@@ -336,100 +300,99 @@ You can make changes to a file in context of the new branch.
 You can preview, then commit changes to the branch.
 
 To create and immediately switch to the branch via command line:
+
 - `git switch -c branch-name`
 - `git checkout -b branch-name`
 
-<br>
-
 ### Switch Branch
+
 ([top](#github))
 
 To switch to another branch in GitHub's web interface, click the branch dropdown and select the branch you want to work on.
 
 To switch branches using the command line:
+
 - `git switch branch-name`
 - `git branch branch-name`
 
-<br>
-
 ### Delete Branch
+
 ([top](#github))
 
 To delete a branch on GitHub, go to the branches page, find your branch, and click the delete icon (trash can).
 
 To delete a branch using the command line:
+
 - `git branch -d branch-name`
 
 To delete a remote branch:
+
 - `git push origin --delete branch-name`
 
-<br>
-
 ### Rename Branch
+
 ([top](#github))
 
 To rename a branch using the command line:
+
 - `git branch -m old-name new-name`
 
-<br>
-
 ### Merge Branch
+
 ([top](#github))
 
 To merge a branch into another on GitHub, open a Pull Request (PR) and follow the prompts to merge.
 
 To merge using the command line:
+
 - `git merge branch-name`
 
-<br>
-
 ### View Branches
+
 ([top](#github))
 
 To see all branches in your repository on GitHub, click the branch dropdown at the top of the file list.
 
 To view branches using the command line:
+
 - `git branch`
 
-<br>
-
 ### Protected Branches
+
 ([top](#github))
 
 Some branches (like main) may be protected, meaning you cannot delete or force-push to them without special permissions.
 
 This helps prevent accidental changes to important branches.
 
-<br><br>
-
 ## Pull Remote Branch from Github
+
 ([top](#github))
 
 ### Pull a Remote Branch
+
 ([top](#github))
 
 Firstly run a general `git pull`. This will show any changes on the remote, including whether any new remote branches exists.
 
 `git status` should show the state of your current branch.
 
-<br>
-
 ### Git Branch
+
 ([top](#github))
 
 - `git branch` may not show the new branch on the remote on our local git yet.
 - We can use the -a option to see all local and remote branches:
-    - `git branch -a`
+  - `git branch -a`
 - To view only remote branches:
-    - `git branch -r`
+  - `git branch -r`
 - Checkout the remote branch:
-    - `git checkout branch-name`
+  - `git checkout branch-name`
 - Then run a `git pull` to see if we are up to date with the remote.
 - `git branch` should then show the remote branch in our local git.
 
-<br><br>
-
 ## Push a Branch to Github
+
 ([top](#github))
 
 ### Push a local branch up to GitHub
@@ -437,48 +400,43 @@ Firstly run a general `git pull`. This will show any changes on the remote, incl
 Firstly create your new branch locally, make changes, then commit your changes.
 
 Push your branch to GitHub via:
+
 - `git push origin branch-name`
 
 You should then be able to see the branch on GitHub.
 
-<br>
-
 ### Push and Set Upstream
 
 Use this if your branch doesn't exist on GitHub yet, and you want to track it:
-- `git push --set-upstream origin update-readme`
 
-<br>
+- `git push --set-upstream origin update-readme`
 
 ### Force Push
 
 **Warning**: This overwrites the branch on GitHub with your local changes. Only use if you understand the risks.
-- `git push --force origin update-readme`
 
-<br>
+- `git push --force origin update-readme`
 
 ### Delete Remote Branch
 
 Remove a branch from GitHub:
-- `git push origin --delete update-readme`
 
-<br>
+- `git push origin --delete update-readme`
 
 ### Push All Branches
 
 Push all your local branches to GitHub:
-- `git push --all origin`
 
-<br>
+- `git push --all origin`
 
 ### Push Tags
 
 Push all your tags to GitHub:
+
 - `git push --tags`
 
-<br><br>
-
 ## GitHub Flow
+
 ([top](#github))
 
 The GitHub Flow is a simple, effective workflow for collaborating on code using Git and GitHub.
@@ -505,10 +463,9 @@ This workflow is designed to be easy for beginners and powerful for teams of any
 - When you make a new branch, you will (almost always) want to make it from the master branch.
 
 **Note**:
+
 - Keep in mind that you are working with others.
 - Use descriptive names for new branches, so everyone can understand what is happening.
-
-<br>
 
 ### Make Changes and Add Commits
 
@@ -519,19 +476,16 @@ This workflow is designed to be easy for beginners and powerful for teams of any
 - Each commit should have a message explaining what has changed and why.
 - Each commit becomes a part of the history of the branch, and a point you can revert back to if you need to.
 
-**Note**: 
+**Note**:
+
 - Commit messages are very important! Let everyone know what has changed and why.
 - Messages and comments make it so much easier for yourself and other people to keep track of changes.
-
-<br>
 
 ### Open a Pull Request
 
 - Pull requests are a key part of GitHub.
 - A Pull Request notifies people you have changes ready for them to consider or review.
 - You can ask others to review your changes or pull your contribution and merge it into their branch.
-
-<br>
 
 ### Review
 
@@ -540,10 +494,9 @@ This workflow is designed to be easy for beginners and powerful for teams of any
 - Pull Requests are designed to allow people to work together easily and produce better results together!
 - If you receive feedback and continue to improve your changes, you can push your changes with new commits, making further reviews possible.
 
-**Note**: 
-- GitHub shows new commit and feedback in the "unified Pull Request view".
+**Note**:
 
-<br>
+- GitHub shows new commit and feedback in the "unified Pull Request view".
 
 ### Deploy
 
@@ -551,19 +504,17 @@ This workflow is designed to be easy for beginners and powerful for teams of any
 - GitHub allows you to deploy from a branch for final testing in production before merging with the master branch.
 - If any issues arise, you can undo the changes by deploying the master branch into production again!
 
-**Note**: 
-- Teams often have dedicated testing environments used for deploying branches.
+**Note**:
 
-<br>
+- Teams often have dedicated testing environments used for deploying branches.
 
 ### Merge
 
 - After exhaustive testing, you can merge the code into the master branch!
 - Pull Requests keep records of changes to your code, and if you commented and named changes well, you can go back and understand why changes and decisions were made.
 
-**Note**: 
-- You can add keywords to your pull request for easier searching!
+**Note**:
 
-<br><br>
+- You can add keywords to your pull request for easier searching!
 
 ([top](#github))
