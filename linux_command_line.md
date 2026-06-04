@@ -10,6 +10,8 @@ Sub-headings:
 - [Files](#files)
 - [History](#history)
 - [Other useful](#other-useful)
+- [Output Re-direction](#output-re-direction)
+- [Streams](#streams)
 
 ## Basics
 
@@ -28,6 +30,8 @@ Sub-headings:
 | `cd ../..` | move up multiple directories - keep repeating |
 | `clear` | clear window |
 | `command -v [app name]` | check if an app is installed. e,g, command -v vim |
+| `echo "this text"` | print the content in quotes to screen |
+| `echo $?` | print the exit code of the last command - see [streams](#streams) |
 | `pwd` | print working directory |
 | `whoami` | who is the current user |
 
@@ -95,3 +99,110 @@ Sub-headings:
 | `unzip [zip file name]` | unzip a zip file |
 | `[command] --help` | find help on a given command |
 | `exit` | closes the terminal window |
+
+## Output Re-direction
+
+([top](#linux-command-line))
+
+You can re-direct the output of a given command into a file.
+
+There are a few ways this can be done.
+
+### New file re-direction
+
+Use the `>` symbol to re-direct the output to a new file:
+
+- `ls -l > newfile1.txt`
+
+**Key points here**:
+
+- If the defined file doesn't already exist, it will be created.
+- If the file does already exist, then it will be over-written by the latest execution of the command.
+- ***Be careful with a single `>`*** as it will blow away any existing content in the original file if you over-write,
+
+### Append re-direction to a file
+
+Use `>>` to re-direct the output and append to a file if it exists:
+
+- `ls -l >> newfile2.txt`
+
+**Key points here**:
+
+- Again, if the defined file doesn't already exist, it will be created.
+- However, if the file does already exist, then the re-directed output will be appended to the end of the existing file.
+
+### Re-direct to 'purgatory'
+
+- If you want to 'cast aside' content from a command, you can write it to a specific path as follows:
+  - /dev/null
+- anything written there 'disappears'.
+  - No file is written.
+  - No remnants are left.
+  - It is just 'sent to purgatory'.
+  - Anything written here is not seen nor heard from again.
+- Can be useful to filter out stderr (standard errors) via exit code 2.
+  - see [filter out stderr example](#filter-out-stderr-example).
+
+### Chaining (or piping) commands
+
+This enable you to 'pipe' the output of one command as input into the next command and so on.
+
+You use the pipe symbol `|` to do this.
+
+This can be very powerful.
+
+**Examples**:
+
+| command | action |
+| ----- | ----- |
+| `ls -l \| grep f` | This runs the output of the `ls -l` through the `grep f`, effectively searching for only records which contain the letter f. |
+| `cat file2.txt \| sort \| uniq \| grep -v txt` | This example takes the contents of a given file, sorts them, then identifies the unique records, then excludes (via `grep -v`) any files containing the text txt. |
+| `ls -l \| wc` | This pipes the output into `wc` (word count) which gives you three outputs: rows, words, characters as output. |
+| `ls -l \| wc -l` | This pipes the output into `wc -l` (word count -> lines option) which gives you a row count as output. |
+| `ls -l /etc \| wc -l` | Example to get the count of lines in a given specified directory - i.e. /etc. |
+
+## Streams
+
+([top](#linux-command-line))
+
+There are three different 'streams' in Linux:
+
+1. stdin - standard input (file descriptor: 0)
+2. stdout - standard output (file descriptor: 1)
+3. stderr - standard error (file descriptor: 2)
+
+### Standard Input - stdin
+
+- Standard Input is effectively anything that is input into a command.
+- This could be input from the keyboard, or output from a previous command, which is then redirected or piped into another command as input.
+
+### Standard Output - stdout
+
+- This is any successful output that **has not** resulted in an error.
+- This basically means when we have received output that is valid, it is standard output.
+- to write all stderr from a find command to a file, you could use this:
+  - `find / -name *.log 1> successful.txt`
+
+### Standard Error - stderr
+
+- This is output that **has** resulted in an error.
+- This output is defined as standard error.
+- to write all stderr from a find command to a file, you could use this:
+  - `find / -name *.log 2> errors.txt`
+  
+#### Filter out stderr example
+
+- a useful example of filtering out / removing stderr content is as follows:
+  - `find / -name *.log 2> /dev/null`
+  - in this example we find all log files in the root directory but re-direct stderr (2) into `/dev/null` via the `2> /dev/null`
+  - see [redirect to purgatory](#re-direct-to-purgatory) for more detail.
+
+### echo command
+
+- You can check the exit code for the previous command via:
+  - `echo $?`
+- Run this after
+  - a successful command like: `ls`, you should see 0 returned.
+  - trying to cd into a non-existent directory, (like `ls turtles`), you should see 2 returned.
+- `$?` is actually a special variable that defines the exit code of the previous command.
+  - So echoing that out returns 0 (stdin) or 2 (stderr).
