@@ -10,6 +10,7 @@
 - [Linux Command Line](linux_command_line.md)
 - [Super User Do](super_user_do.md)
 - [Shells](shells.md)
+- [Bash Variables](bash_variables.md)
 
 ## Linux System Admin
 
