@@ -100,6 +100,7 @@ Sub-headings:
 | `unzip [zip file name]` | unzip a zip file |
 | `[command] --help` | find help on a given command |
 | `exit` | closes the terminal window |
+| `cat /etc/os-release` | prints out details of your distribution |
 
 ## Output Re-direction
 
