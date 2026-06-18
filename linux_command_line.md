@@ -12,6 +12,7 @@ Sub-headings:
 - [Other useful](#other-useful)
 - [Output Re-direction](#output-re-direction)
 - [Streams](#streams)
+- [Find](#find)
 
 ## Basics
 
@@ -206,3 +207,22 @@ There are three different 'streams' in Linux:
   - trying to cd into a non-existent directory, (like `ls turtles`), you should see 2 returned.
 - `$?` is actually a special variable that defines the exit code of the previous command.
   - So echoing that out returns 0 (stdin) or 2 (stderr).
+
+## find
+
+The find command is very useful for hunting down files or directories.
+
+Example:
+
+- `find /var/log/ -type f -name "*.log" -mtime -7`
+  - `/var/log` defines the directory to search in
+  - `-type f` defines type = file
+  - `-name "*.log"` searches by name using wildcard
+  - `-mtime -7` defines modified in the last 7 days
+
+Another example - filtering out errors to /dev/null:
+
+- `find /var -type f -name "*log" 2> /dev/null`
+  - `2> /dev/null` in this case discards errors (like files I don't have access permissions on).
+
+You can also use `-exec` to execute a command on the results fo what you have found. BUT, be careful as this can create issues if you execute something incorrectly.
