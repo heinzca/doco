@@ -210,6 +210,8 @@ There are three different 'streams' in Linux:
 
 ## find
 
+([top](#linux-command-line))
+
 The find command is very useful for hunting down files or directories.
 
 Example:
