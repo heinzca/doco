@@ -14,7 +14,6 @@
   - [CentOS Distro](#centos-distro)
   - [Fedora Distros](#fedora-distros)
 
-
 ## Updating Packages
 
 [(top)](#linux-package-management)
