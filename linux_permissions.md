@@ -75,3 +75,45 @@ In summary:
 - `a` = all
 
 [(top)](#linux-permissions)
+
+## Numerical Permissions
+
+You can also apply permissions numerically via `chmod`.
+
+So to apply this against a sample file like 'textfile.txt', you could execute:  
+`chmod 400 textfile`  
+
+When this is done numerically, the three digits align to:
+
+- user (digit 1)
+- group (digit 2)
+- Other (digit 3)
+
+Given the following values:
+
+- r = 4
+- w = 2
+- x = 1
+
+(Note that 0 means no access.)
+
+So based on the example, by supplying 400:
+
+- 4 means give user 'r'
+- 0 means no access for group
+- 0 means no access for others
+
+So the combinations of numbers are:
+
+- 0 => no access
+- 1 => execute only
+- 2 => write only
+- 3 => write and execute (2 + 1)
+- 4 => read only
+- 5 => read and execute (4 + 1)
+- 6 => read and write (4 + 2)
+- 7 => read, write and execute (4 + 2 + 1)
+
+So, this would give full access to all:
+
+- `chmod 777 textfile.txt`
