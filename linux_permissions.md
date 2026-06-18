@@ -114,6 +114,6 @@ So the combinations of numbers are:
 - 6 => read and write (4 + 2)
 - 7 => read, write and execute (4 + 2 + 1)
 
-So, this would give full access to all:
+So, this command would give full access to all:
 
 - `chmod 777 textfile.txt`
