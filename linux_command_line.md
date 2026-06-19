@@ -46,7 +46,7 @@ Sub-headings:
 | `..` | up one directory |
 | `mkdir [directory name]` | make directory |
 | `cp -r [directory] [destination]` | copy folder and it's contents (`-r` = recursive) |
-| `mv [File or Directory] [destination]` | move file or folder to 'destination' |
+| `mv [File or Directory] [destination]` | move or re-name file or folder to 'destination' |
 | `rmdir [directory name]` | remove empty directory |
 | `rm -r [directory name]` | remove directory and it's contents (`-r` = recursive) |
 
