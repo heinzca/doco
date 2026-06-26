@@ -20,4 +20,6 @@
 - [systemd Units](linux_manage_systemd_units.md)
 - [Viewing Logs](linux_viewing_logs.md)
 - [Managing Users](linux_managing_users.md)
-- [ssh - OpenSSH](ssh.md)
+- [Remote Connection via ssh - OpenSSH](ssh.md)
+- [Transfer Files via scp](scp.md)
+- [Transfer Files via rsync](rsync.md)
